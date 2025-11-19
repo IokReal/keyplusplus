@@ -35,7 +35,7 @@ jobs:
         ANDROID_SDK_PATH=$ANDROID_HOME/build-tools/35.0.0/apksigner
         $ANDROID_SDK_PATH sign \
         --ks $RUNNER_TEMP/keystores/keystore.jks \
-        --ks-key-alias ${{ secrets.KEY_ALIAS }} \
+        --ks-key-alias ${{ secrets.RELEASE_SIGN_KEY_ALIAS }} \
         --ks-pass pass:${{ secrets.KEYSTORE_PASSWORD }} \
         --key-pass pass:${{ secrets.KEYSTORE_PASSWORD }} \
         --out app-release.apk \
